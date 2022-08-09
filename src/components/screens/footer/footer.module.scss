@@ -1,0 +1,41 @@
+.footer {
+	padding: 70px 40px 30px;
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 25px;
+		&_contact {
+			display: flex;
+			justify-content: flex-start;
+			gap: 28px;
+			align-items: center;
+			a {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 19px;
+				color: #B7BDC2;
+				span {
+					color: #6B757C;
+					font-weight: 700;
+				}
+			}
+		}
+		&_copyright {
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 19px;
+			text-align: right;
+			color: #B7BDC2;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.footer {
+		padding: 50px 20px 20px;
+	}
+	.footer__content {
+		flex-direction: column;
+	}
+}

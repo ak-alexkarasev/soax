@@ -1,0 +1,144 @@
+.menu {
+	background: linear-gradient(180deg, #02286C 0%, #02286C 47.16%, #096AF6 100%);
+	// max-width: calc(250px * 100% / 1440px);
+	max-width: 250px;
+	position: fixed;
+	height: 100vh;
+	&__logo {
+		padding: 21px 0 26px;
+		margin: 0 40px 7px;
+		border-bottom: 1px solid #21398C;
+	}
+	&__box {
+		padding-top: 32px;
+	}
+	&__list {}
+	&__sup {
+		font-family: 'Nunito Sans';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 10px;
+		line-height: 14px;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #4C66A8;
+		padding: 0 16px 10px;
+	}
+	&__item {
+		font-family: 'Nunito Sans';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 25px;
+		color: #B3BFDC;
+		background: none;
+		width: 100%;
+		text-align: left;
+		padding: 5.5px 16px;
+		transition: .3s all;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 19px;
+		position: relative;
+		cursor: pointer;
+		&_icon {
+			width: 20px;
+			height: 20px;
+			transition: .3s all;
+			&_1 {
+				background: url('../../../img/header/menu_icon-1.svg') left center no-repeat;
+			}
+			&_2 {
+				background: url('../../../img/header/menu_icon-2.svg') left center no-repeat;
+			}
+			&_3 {
+				background: url('../../../img/header/menu_icon-3.svg') left center no-repeat;
+			}
+			&_4 {
+				background: url('../../../img/header/menu_icon-4.svg') left center no-repeat;
+			}
+			&_5 {
+				background: url('../../../img/header/menu_icon-5.svg') left center no-repeat;
+			}
+			&_6 {
+				background: url('../../../img/header/menu_icon-6.svg') left center no-repeat;
+			}
+		}
+		&_active {
+			&:after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 9px;
+				border: 9px solid transparent; 
+				border-right: 9px solid #fff;
+			}
+		}
+		&_active, &:hover {
+			color: #fff;
+			
+			.menu__item_icon {
+				&_1 {
+					background: url('../../../img/header/menu_icon-1_active.svg') left center no-repeat;
+				}
+				&_2 {
+					background: url('../../../img/header/menu_icon-2_active.svg') left center no-repeat;
+				}
+				&_3 {
+					background: url('../../../img/header/menu_icon-3.svg') left center no-repeat;
+				}
+				&_4 {
+					background: url('../../../img/header/menu_icon-4_active.svg') left center no-repeat;
+				}
+				&_5 {
+					background: url('../../../img/header/menu_icon-5.svg') left center no-repeat;
+				}
+				&_6 {
+					background: url('../../../img/header/menu_icon-6_active.svg') left center no-repeat;
+				}
+			}
+		}
+	}
+}
+
+.menu__out {
+	margin: 20px 20px 40px 40px;
+	position: absolute;
+	bottom: 0;
+	&_button {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 26px;
+		font-family: 'Nunito Sans';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 22px;
+		color: #FFFFFF;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.menu {
+		width: 180px;
+	}
+	.menu__logo {
+		margin: 0 20px 7px;
+		width: 140px;
+		padding: 17px 0 15px;
+		img {
+			width: 100%;
+		}
+	}
+	.menu__item {
+		font-size: 15px;
+		gap: 8px;
+	}
+	.menu__out {
+		margin: 20px 10px 40px 20px;
+		&_button {
+			gap: 15px;
+		}
+	}
+}
